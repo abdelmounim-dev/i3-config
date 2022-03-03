@@ -335,7 +335,7 @@ exec mailspring
 exec elisa
 
 # change the wallpaper
-exec_always feh --bg-scale Pictures/wallpaper.jpg
+exec_always feh --bg-scale Pictures/wallpaper.*
 
 # remove plasma's wallpaper and dock
 exec_always killall plasmashell

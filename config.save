@@ -323,7 +323,7 @@ exec code
 exec firefox
 
 # open file manager on startup
-exec xdg-open ~
+# exec xdg-open ~
 
 # open telegram on startup
 exec telegram-desktop

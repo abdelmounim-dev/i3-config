@@ -262,6 +262,8 @@ bindsym $mod+r mode "resize"
 #     }
 # }
 
+bindsym F12 exec yakuake
+
 # Plasma compatibility improvements
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -282,8 +284,8 @@ for_window [class="plasmashell" window_type="notification"] border none, move ri
 no_focus [class="plasmashell" window_type="notification"]
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 # using plasma's logout screen instead of i3's
-bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
-
+# bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+bindsym $mod+Shift+e exec xfce4-session-logout
 # color theme
 set $bg-color             #89b4fa
 set $inactive-bg-color    #1e1e2e
@@ -340,16 +342,19 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec firefox
 
 # open file manager on startup
-exec xdg-open ~
+# exec xdg-open ~
 
 # open telegram on startup
 # exec telegram-desktop
 
 # open mail client on startup
-exec mailspring
+# exec mailspring
 
 # open music player on startup
 # exec elisa
+
+# start greenclip daemon
+exec_always greenclip daemon
 
 # change the wallpaper
 exec_always feh --bg-center Pictures/wallpaper.*

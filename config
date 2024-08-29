@@ -357,7 +357,10 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always greenclip daemon
 
 # change the wallpaper
-exec_always feh --bg-center Pictures/wallpaper.*
+exec_always feh --bg-scale Pictures/wallpaper.*
+
+# use the utlrawide only
+exec_always ./ultrawide-only.sh
 
 # remove plasma's wallpaper and dock
 exec_always killall plasmashell
